@@ -21,6 +21,7 @@ import SPFieldUrlDisplay from './SPFieldUrlDisplay';
 
 import * as strings from 'FormFieldStrings';
 import styles from './SPFormField.module.scss';
+import SPFieldUserEdit from './SPFieldUserEdit';
 
 
 const EditFieldTypeMappings: {[fieldType: string]: React.StatelessComponent<ISPFormFieldProps>} = {
@@ -35,8 +36,8 @@ const EditFieldTypeMappings: {[fieldType: string]: React.StatelessComponent<ISPF
   DateTime: SPFieldDateEdit,
   Boolean: SPFieldBooleanEdit,
   File: SPFieldTextEdit,
+  User: SPFieldUserEdit,
   /* The following are known but unsupported types as of now:
-  User: null,
   UserMulti: null,
   URL: null,
   TaxonomyFieldType: null,
@@ -67,7 +68,6 @@ const DisplayFieldTypeMappings: {[fieldType: string]: {component: React.Stateles
   Attachments: null,
   */
 };
-
 
 export interface ISPFormFieldProps extends IFormFieldProps {
     extraData?: any;

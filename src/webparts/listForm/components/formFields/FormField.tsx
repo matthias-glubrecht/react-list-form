@@ -14,6 +14,7 @@ import * as stylesImport from 'office-ui-fabric-react/lib/components/TextField/T
 const styles: any = stylesImport;
 
 import ardStyles from './FormField.module.scss';
+import { WebPartContext } from '@microsoft/sp-webpart-base';
 
 
 export interface IFormFieldProps {
@@ -27,6 +28,7 @@ export interface IFormFieldProps {
   value: any;
   errorMessage?: string;
   valueChanged(newValue: any): void;
+  context: WebPartContext;
 }
 
 

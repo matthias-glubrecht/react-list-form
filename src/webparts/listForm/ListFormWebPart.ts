@@ -75,6 +75,7 @@ export default class ListFormWebPart extends BaseClientSideWebPart<IListFormWebP
           showUnsupportedFields: this.properties.showUnsupportedFields,
           onSubmitSucceeded: (id: number) => this.formSubmitted(id),
           onUpdateFields: (fields: IFieldConfiguration[]) => this.updateField(fields),
+          context: this.context
         }
       );
     } else {
@@ -94,6 +95,7 @@ export default class ListFormWebPart extends BaseClientSideWebPart<IListFormWebP
   }
 
 
+  // @ts-ignore
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
